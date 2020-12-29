@@ -53,6 +53,12 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
 
+    //Design
+    implementation "com.google.android.material:material:1.2.1"
+
+    //Mockk - Test Unitaire
+    testImplementation "io.mockk:mockk:1.10.4"
+
 
     //Android
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
