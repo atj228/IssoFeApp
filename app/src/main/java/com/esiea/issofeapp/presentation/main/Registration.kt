@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.esiea.issofeapp.R
-import com.esiea.issofeapp.presentation.movies.SingleMovie
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_registration.*
 import org.koin.android.ext.android.inject

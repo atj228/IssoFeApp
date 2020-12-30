@@ -9,14 +9,12 @@ import com.esiea.issofeapp.domain.usecase.CreateUserUseCase
 import com.esiea.issofeapp.domain.usecase.GetUserUseCase
 import com.esiea.issofeapp.presentation.main.MainViewModel
 import com.esiea.issofeapp.presentation.main.RegistrationViewModel
-import com.esiea.issofeapp.presentation.movies.MovieViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val presentationModule = module {
     factory { MainViewModel(get(), get()) }
     factory { RegistrationViewModel(get(), get()) }
-    factory { MovieViewModel(get()) }
 }
 
 val domainModule = module {

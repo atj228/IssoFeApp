@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.esiea.issofeapp" >
+    package="com.esiea.issofeapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,12 +11,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IssoFeApp" >
-        <activity android:name=".presentation.main.Registration" >
-        </activity>
-        <activity android:name=".presentation.movies.MovieActivity" />
+        android:theme="@style/Theme.IssoFeApp">
+        <activity android:name=".presentation.main.MovieActivity"></activity>
+        <activity android:name=".presentation.main.Registration"></activity>
+        <activity android:name=".presentation.main.MovieActivity" />
         <activity android:name=".presentation.movies.SingleMovie" />
-        <activity android:name=".presentation.main.MainActivity" >
+        <activity android:name=".presentation.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

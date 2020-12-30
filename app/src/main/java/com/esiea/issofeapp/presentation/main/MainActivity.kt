@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.esiea.issofeapp.R
-import com.esiea.issofeapp.presentation.movies.MovieActivity
-import com.esiea.issofeapp.presentation.movies.SingleMovie
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                             dialog.dismiss()
                         }
                         .show()
-                    val intent = Intent(this, SingleMovie::class.java)
+                    val intent = Intent(this, MovieActivity::class.java)
                     startActivity(intent)
                 }
                 LoginError -> {
