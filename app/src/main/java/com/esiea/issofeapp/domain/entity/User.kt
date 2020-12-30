@@ -1,5 +1,7 @@
 package com.esiea.issofeapp.domain.entity
 
 data class User (
-    val email: String
+    val username: String,
+    val email: String,
+    val password: String
 )

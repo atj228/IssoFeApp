@@ -3,6 +3,7 @@ package com.esiea.issofeapp.presentation.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.esiea.issofeapp.domain.entity.User
 import com.esiea.issofeapp.domain.usecase.CreateUserUseCase
 import com.esiea.issofeapp.domain.usecase.GetUserUseCase
 import com.esiea.issofeapp.presentation.main.LoginError
@@ -22,11 +23,20 @@ class MainViewModel(
 
     fun onClickedLogin(emailUser: String, password: String){
         viewModelScope.launch(Dispatchers.IO) {
-            val user = getUserUseCase.invoke(emailUser)
-            val loginStatus = if(user != null){
-                LoginSuccess(user.email)
+            val user: User? = getUserUseCase.invoke(emailUser)
+            var userPassword: User? = null
+            if(user != null){
+                userPassword = getUserUseCase.invoke(emailUser, password)
+            }
+            val loginStatus = if(userPassword != null){
+                LoginSuccess(userPassword.email, userPassword.password)
             } else {
-                LoginError
+                if(user != null){
+                    PassError
+                }
+                else{
+                    LoginError
+                }
             }
             withContext(Dispatchers.Main){
                 loginLiveData.value = loginStatus

@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".presentation.main.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="LogIn"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/username_input_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- Login Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_input_layout"

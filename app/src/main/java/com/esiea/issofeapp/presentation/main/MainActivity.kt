@@ -22,7 +22,15 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loginLiveData.observe(this, Observer {
             when(it){
                 is LoginSuccess -> {
-                    //TODO Navigate
+                    MaterialAlertDialogBuilder(this)
+                        .setTitle("Succès")
+                        .setMessage("Compte reconnu")
+                        .setPositiveButton("OK"){ dialog, which ->
+                            dialog.dismiss()
+                        }
+                        .show()
+                    val intent = Intent(this, SingleMovie::class.java)
+                    startActivity(intent)
                 }
                 LoginError -> {
                     MaterialAlertDialogBuilder(this)
@@ -32,8 +40,17 @@ class MainActivity : AppCompatActivity() {
                             dialog.dismiss()
                         }
                         .show()
-
                 }
+                PassError -> {
+                    MaterialAlertDialogBuilder(this)
+                        .setTitle("Erreur")
+                        .setMessage("Mot de passe inconnu")
+                        .setPositiveButton("OK") { dialog, which ->
+                            dialog.dismiss()
+                        }
+                        .show()
+                }
+
             }
         })
         login_button.setOnClickListener {
@@ -41,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         create_account_button.setOnClickListener {
-            val intent = Intent(this, MovieActivity::class.java)
+            val intent = Intent(this, Registration::class.java)
             startActivity(intent)
         }
     }
