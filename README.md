@@ -3,6 +3,9 @@ Mobile Programming project
 <p>IssoFeApp is a mobile application that show the popular movies from the Api <strong>TMDB</strong>
 <p>It is a project that allowed me to learn how to create a mobile application with <strong>Kotlin</strong> language.</p>
 
+# Technical Stack
+<p>Kotlin, Room, Koin, Retrofit, Glide, Coroutines, Mockk, RecyclerView</p>
+
 # Goal of the project
 <ul>
     <li>MVVM Architecture</li>
