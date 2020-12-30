@@ -19,7 +19,7 @@
 # Screenshot of the application
 
 <div>
-    <p>hjh<img src="image/1_splash_screen.jpg" alt="splash_screen" height="300"></p>
+    <img src="image/1_splash_screen.jpg" alt="splash_screen" height="300">
     <img src="image/2_login_screen.jpg" alt="login_screen" height="300">
     <img src="image/3_registration_screen.jpg" alt="registration_screen" height="300">
 </div>
