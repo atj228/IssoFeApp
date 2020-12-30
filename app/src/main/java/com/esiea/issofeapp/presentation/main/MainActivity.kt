@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.esiea.issofeapp.R
+import com.esiea.issofeapp.presentation.movies.SingleMovie
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -38,9 +39,10 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.onClickedLogin(login_edit.text.toString().trim(), password_edit.text.toString())
         }
 
-        /*create_account_button.setOnClickListener {
-            val intent = Intent(this, MoviesActivity::class.java)
-            startActivity(intent)
-        }*/
+        create_account_button.setOnClickListener {
+            val intent = Intent(this, SingleMovie::class.java)
+            intent.putExtra("id", 464052)
+            this.startActivity(intent)
+        }
     }
 }

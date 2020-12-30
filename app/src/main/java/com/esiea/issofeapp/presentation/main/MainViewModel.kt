@@ -3,9 +3,11 @@ package com.esiea.issofeapp.presentation.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.esiea.issofeapp.domain.entity.User
 import com.esiea.issofeapp.domain.usecase.CreateUserUseCase
 import com.esiea.issofeapp.domain.usecase.GetUserUseCase
+import com.esiea.issofeapp.presentation.main.LoginError
+import com.esiea.issofeapp.presentation.main.LoginStatus
+import com.esiea.issofeapp.presentation.main.LoginSuccess
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

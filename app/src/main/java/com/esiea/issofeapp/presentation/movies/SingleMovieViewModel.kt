@@ -1,4 +1,4 @@
-package com.esiea.issofeapp.presentation.main
+package com.esiea.issofeapp.presentation.movies
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
