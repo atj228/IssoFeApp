@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class MovieSecond(
+data class Movie(
     @SerializedName("id")
     val id: String?,
     @SerializedName("poster_path")
@@ -13,6 +13,8 @@ data class MovieSecond(
     @SerializedName("release_date")
     val releaseDate: String?,
     val title: String?,
+    @SerializedName("overview")
+    val overview: String?
 ): Parcelable {
-    constructor() : this("", "", "", "")
+    constructor() : this("", "", "", "", "")
 }

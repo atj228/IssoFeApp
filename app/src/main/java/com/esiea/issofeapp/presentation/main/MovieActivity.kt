@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.esiea.issofeapp.R
 import com.esiea.issofeapp.data.api.MovieApiInterface
 import com.esiea.issofeapp.data.api.MovieApiService
-import com.esiea.issofeapp.data.remote.MovieResponseSecond
-import com.esiea.issofeapp.data.remote.MovieSecond
+import com.esiea.issofeapp.data.remote.MovieResponse
+import com.esiea.issofeapp.data.remote.Movie
 import kotlinx.android.synthetic.main.activity_movie.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,19 +20,19 @@ class MovieActivity : AppCompatActivity() {
 
         rv_movies_list.layoutManager = LinearLayoutManager(this)
         rv_movies_list.setHasFixedSize(true)
-        getMovieData { movies : List<MovieSecond> ->
+        getMovieData { movies : List<Movie> ->
             rv_movies_list.adapter = MovieAdapter(movies)
         }
     }
 
-    private fun getMovieData(callback: (List<MovieSecond>) -> Unit){
+    private fun getMovieData(callback: (List<Movie>) -> Unit){
         val apiService = MovieApiService.getInstance().create(MovieApiInterface::class.java)
-        apiService.getMovieList().enqueue(object : Callback<MovieResponseSecond> {
-            override fun onFailure(call: Call<MovieResponseSecond>, t: Throwable) {
+        apiService.getMovieList().enqueue(object : Callback<MovieResponse> {
+            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
 
             }
 
-            override fun onResponse(call: Call<MovieResponseSecond>, response: Response<MovieResponseSecond>) {
+            override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 return callback(response.body()!!.movies)
             }
 
