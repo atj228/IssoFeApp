@@ -38,9 +38,9 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.onClickedLogin(login_edit.text.toString().trim(), password_edit.text.toString())
         }
 
-        create_account_button.setOnClickListener {
+        /*create_account_button.setOnClickListener {
             val intent = Intent(this, MoviesActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }
