@@ -59,6 +59,9 @@ dependencies {
     //Mockk - Test Unitaire
     testImplementation "io.mockk:mockk:1.10.4"
 
+    //RecycleView
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
 
     //Android
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
