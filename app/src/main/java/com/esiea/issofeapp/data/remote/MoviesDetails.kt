@@ -4,6 +4,8 @@ package com.esiea.issofeapp.data.remote
 import com.google.gson.annotations.SerializedName
 
 data class MoviesDetails(
+    @SerializedName("budget")
+    val budget: Int,
     @SerializedName("id")
     val id: Int,
     @SerializedName("overview")

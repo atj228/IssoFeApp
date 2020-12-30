@@ -53,7 +53,7 @@ class SingleMovie : AppCompatActivity() {
         movie_overview.text = it.overview
 
         val formatCurrency = NumberFormat.getCurrencyInstance(Locale.US)
-       // movie_budget.text = formatCurrency.format(it.budjet)
+        movie_budget.text = formatCurrency.format(it.budget)
         movie_revenue.text = formatCurrency.format(it.revenue)
 
         val moviePosterURL = POSTER_BASE_URL + it.posterPath
