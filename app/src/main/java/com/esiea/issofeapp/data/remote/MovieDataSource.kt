@@ -22,21 +22,21 @@ class MovieDataSource(
         params: LoadInitialParams<Int>,
         callback: LoadInitialCallback<Int, Movie>
     ) {
-        networkState.postValue(NetworkState.LOADING)
-        compositeDisposable.add(
-            apiService.getPopularMovie(page)
-                .subscribeOn(Schedulers.io())
-                .subscribe(
-                    {
-                        callback.onResult(it.movieList, null, page+1)
-                        networkState.postValue(NetworkState.LOADED)
-                    },
-                    {
-                        networkState.postValue(NetworkState.ERROR)
-                        Log.e("MovieDataSource", it.message.toString())
-                    }
-                )
-        )
+            networkState.postValue(NetworkState.LOADING)
+            compositeDisposable.add(
+                apiService.getPopularMovie(page)
+                    .subscribeOn(Schedulers.io())
+                    .subscribe(
+                        {
+                            callback.onResult(it.movieList, null, page + 1)
+                            networkState.postValue(NetworkState.LOADED)
+                        },
+                        {
+                            networkState.postValue(NetworkState.ERROR)
+                            Log.e("MovieDataSource", it.message.toString())
+                        }
+                    )
+            )
     }
 
     override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, Movie>) {
