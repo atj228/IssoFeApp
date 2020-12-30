@@ -1,6 +1,6 @@
 # IssoFeApp
 ### Mobile Programming project (4A)
-<p>IssoFeApp is a mobile application that show the popular movies from the Api <strong><a href="https://developers.themoviedb.org/3/getting-started/introduction">TMDB</a></strong></p>
+<p>IssoFeApp is a mobile application that shows the popular movies from the <a href="https://fr.wikipedia.org/wiki/Interface_de_programmation">API</a> <strong><a href="https://developers.themoviedb.org/3/getting-started/introduction">TMDB</a></strong></p>
 <p>It is a project that allowed me to learn how to create a mobile application with <strong>Kotlin</strong> language.</p>
 
 # Technical Stack
